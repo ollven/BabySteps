@@ -4,24 +4,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         int cycle = console.nextInt();
+        console.nextLine();
         System.out.println();
-        for (int n = 0; n <= cycle; n++) {
+        for (int n = 0; n < cycle; n++) {
             String fromconsole = console.nextLine();
-            //console.useDelimiter("[ ,\r]");
             Scanner toint = new Scanner(fromconsole);
-            while (toint.hasNext()) {
-                console.useDelimiter("[ ,\r]");
-                int a = toint.nextInt();
-                int b = toint.nextInt();
-                int c = toint.nextInt();
-                int result = a * b + c;
-                int sum = 0;
-                for (int i = 0; result != 0; i++) {
-                    sum = sum + (result % 10);
-                    result = result / 10;
-                }
-                System.out.print(sum + " ");
+            int a = toint.nextInt();
+            int b = toint.nextInt();
+            int c = toint.nextInt();
+            int result = a * b + c;
+            int sum = 0;
+            while (result != 0) {
+                sum = sum + (result % 10);
+                result = result / 10;
             }
+            System.out.print(sum + " ");
         }
     }
 
