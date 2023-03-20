@@ -12,14 +12,19 @@ public class Main {
             int a = toint.nextInt();
             int b = toint.nextInt();
             int c = toint.nextInt();
-            int result = a * b + c;
-            int sum = 0;
-            while (result != 0) {
-                sum = sum + (result % 10);
-                result = result / 10;
-            }
+            int sum = result(a, b, c);
             System.out.print(sum + " ");
         }
+    }
+
+    public static int result(int a, int b, int c){
+        int result = a * b + c;
+        int sum = 0;
+        while (result != 0) {
+            sum = sum + (result % 10);
+            result = result / 10;
+        }
+        return sum;
     }
 
 }
@@ -35,4 +40,3 @@ public class Main {
         int c = Integer.parseInt(s[2]);*/
 //попробовать превратить в List
 
-//System.out.println(a + b + c);
