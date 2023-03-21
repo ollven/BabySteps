@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-class MainTst {
+class MainTest {
 
     @Test
     public void testResult() {
