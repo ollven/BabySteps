@@ -19,13 +19,13 @@ public class SecondDummyTest {
 
     @Test
     public void testThatIsSlowButAlwaysFails() throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         Assertions.fail();
     }
 
     @Test
     public void testThatIsSlowButAlwaysPasses() throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         Assertions.assertTrue(true);
     }
 }
