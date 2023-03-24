@@ -3,7 +3,7 @@ package de.ollven.bebysteps.package2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class DummyTestTwo {
+public class SecondDummyTest {
 
     @Test
     public void testThatAlwaysFails() throws InterruptedException {
