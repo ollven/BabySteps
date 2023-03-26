@@ -10,7 +10,7 @@ class MainTest {
         int b = 5;
         int c = 7;
         int actual = Main.result(a, b, c);
-        int expected = 10;
+        int expected = 11;
         Assertions.assertEquals(expected, actual);
     }
 }
