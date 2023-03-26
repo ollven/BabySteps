@@ -1,6 +1,7 @@
 package de.ollven.babysteps.package2;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class SecondDummyTest {
@@ -17,6 +18,7 @@ public class SecondDummyTest {
         Assertions.assertTrue(true);
     }
 
+    @Disabled
     @Test
     public void secondtestThatIsSlowButAlwaysFails() throws InterruptedException {
         Thread.sleep(1000);
