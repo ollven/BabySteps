@@ -18,7 +18,7 @@ public class Main {
     }
 
     public static int result(int a, int b, int c) {
-        int result = a * b + d;
+        int result = a * b + c;
         int sum = 0;
         while (result != 0) {
             sum = sum + (result % 10);
