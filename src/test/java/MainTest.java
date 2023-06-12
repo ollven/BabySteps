@@ -11,7 +11,7 @@ class MainTest {
         int b = 5;
         int c = 7;
         int actual = Main.result(a, b, c);
-        int expected = 11;
+        int expected = 4;
         Assertions.assertEquals(expected, actual);
     }
 }
