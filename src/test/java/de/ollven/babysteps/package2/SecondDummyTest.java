@@ -21,12 +21,12 @@ public class SecondDummyTest {
     @Test
     public void secondtestThatIsSlowButAlwaysFails() throws InterruptedException {
         Thread.sleep(1000);
-        Assertions.assertTrue(true);
+        Assertions.assertTrue(false);
     }
 
     @Test
     public void secondtestThatIsSlowButAlwaysPasses() throws InterruptedException {
         Thread.sleep(2000);
-        Assertions.assertTrue(true);
+        Assertions.assertTrue(false);
     }
 }
