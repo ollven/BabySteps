@@ -15,7 +15,7 @@ public class Main {
             int sum = result(a, b, c);
             System.out.print(sum + " ");
             System.out.print(sum + "CSPcheck333");
-            System.out.print(sum + "TW-70782");
+
         }
     }
 
