@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JB-interview-baby-steps" />
+        <module name="NewArtifactID" />
       </profile>
     </annotationProcessing>
   </component>
