@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.projectFeatures.activeStorage
 import jetbrains.buildServer.configs.kotlin.projectFeatures.s3Storage
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
@@ -42,6 +43,10 @@ project {
             accessKeyID = "AKIA5JH2VERVJFGDHSDZ"
             accessKey = "credentialsJSON:23dcefec-45f1-4a86-ac9f-0d33edd15732"
             bucketName = "ollven-test"
+        }
+        activeStorage {
+            id = "PROJECT_EXT_5"
+            activeStorageID = "PROJECT_EXT_3"
         }
     }
 }
