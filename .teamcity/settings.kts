@@ -49,6 +49,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "target/allure-results => target/allure-results"
+
     vcs {
         root(DslContext.settingsRoot)
     }
