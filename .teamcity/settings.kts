@@ -3,6 +3,7 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.projectFeatures.activeStorage
 import jetbrains.buildServer.configs.kotlin.projectFeatures.s3Storage
+import jetbrains.buildServer.configs.kotlin.triggers.schedule
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -69,6 +70,12 @@ object Build : BuildType({
 
     triggers {
         vcs {
+        }
+        schedule {
+            schedulingPolicy = daily {
+                minute = 35
+            }
+            triggerBuild = always()
         }
     }
 
