@@ -6,9 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JB-interview-baby-steps" />
         <module name="NewArtifactID" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JB-interview-baby-steps" target="11" />
+      <module name="JB-interview-baby-steps-more-than-255-characters-JB-interview-baby-steps-more-than-255-characters-JB-interview-baby-steps-more-than-255-characters-JB-interview-baby-steps-more-than-255-characters-JB-interview-baby-steps-more-than-255-240c" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
