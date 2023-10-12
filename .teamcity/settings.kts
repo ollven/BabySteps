@@ -44,6 +44,8 @@ project {
             accessKeyID = "AKIA5JH2VERVJFGDHSDZ"
             accessKey = "credentialsJSON:23dcefec-45f1-4a86-ac9f-0d33edd15732"
             bucketName = "ollven-test"
+            forceVirtualHostAddressing = true
+            verifyIntegrityAfterUpload = false
         }
         activeStorage {
             id = "PROJECT_EXT_5"
