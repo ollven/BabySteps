@@ -20,6 +20,7 @@ public class Main {
           	System.out.print(sum + "CodeReview34566juhlhljhhj");
             System.out.print(sum + "updateCode");
             System.out.print(sum + "updateCode333");
+            System.out.print(sum + "updateTC");
 
         }
     }
