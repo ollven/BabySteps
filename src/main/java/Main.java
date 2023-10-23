@@ -21,6 +21,8 @@ public class Main {
             System.out.print(sum + "updateCode");
             System.out.print(sum + "updateCode333");
             System.out.print(sum + "updateTC");
+            System.out.print(sum + "MultinideOtherVersionDeafult");
+
 
         }
     }
