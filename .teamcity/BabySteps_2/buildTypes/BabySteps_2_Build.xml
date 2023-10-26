@@ -23,9 +23,7 @@
     <vcs-settings>
       <vcs-entry-ref root-id="BabySteps_2_HttpsGithubComOllvenBabyStepsRefsHeadsMain" />
     </vcs-settings>
-    <requirements>
-      <equals id="RQ_1" name="teamcity.agent.jvm.os.name" value="Windows" />
-    </requirements>
+    <requirements />
     <build-triggers>
       <build-trigger id="TRIGGER_12" type="vcsTrigger">
         <parameters>
