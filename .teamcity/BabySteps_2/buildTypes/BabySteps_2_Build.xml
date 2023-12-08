@@ -19,6 +19,15 @@
           <param name="userSettingsSelection" value="userSettingsSelection:default" />
         </parameters>
       </runner>
+      <runner id="ssh_exec_runner" name="" type="ssh-exec-runner">
+        <parameters>
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="172.19.131.60" />
+          <param name="jetbrains.buildServer.deployer.username" value="ubuntu" />
+          <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
+          <param name="jetbrains.buildServer.sshexec.command" value="cat 1.txt" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="BabySteps_2_HttpsGithubComOllvenBabyStepsRefsHeadsMain" />
