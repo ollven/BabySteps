@@ -10,7 +10,7 @@
     <build-runners>
       <runner id="ssh_exec_runner" name="" type="ssh-exec-runner">
         <parameters>
-          <param name="jetbrains.buildServer.deployer.targetUrl" value="127.0.0.1" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="localhost" />
           <param name="jetbrains.buildServer.deployer.username" value="Olga.Sventukh" />
           <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
           <param name="jetbrains.buildServer.sshexec.command" value="cat 1.txt" />
