@@ -13,7 +13,8 @@
           <param name="jetbrains.buildServer.deployer.targetUrl" value="10.128.93.172" />
           <param name="jetbrains.buildServer.deployer.username" value="ubuntu" />
           <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
-          <param name="jetbrains.buildServer.sshexec.command" value="cat 1.txt" />
+          <param name="jetbrains.buildServer.sshexec.command"><![CDATA[pwd 
+./1.sh]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="teamcitySshKey" value="ollvenMainNode.pem" />
         </parameters>
