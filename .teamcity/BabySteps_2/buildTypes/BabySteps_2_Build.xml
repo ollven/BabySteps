@@ -14,10 +14,10 @@
           <param name="jetbrains.buildServer.deployer.username" value="Administrator" />
           <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
           <param name="jetbrains.buildServer.sshexec.command"><![CDATA[pwd 
-./1.sh]]></param>
+./script.bat]]></param>
           <param name="secure:jetbrains.buildServer.deployer.password" value="credentialsJSON:57da657d-67c5-4f44-a37d-71887366ca3b" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="teamcitySshKey" value="ollvenMainNode.pem" />
+          <param name="teamcitySshKey" value="ollven_windows.pem" />
         </parameters>
       </runner>
       <runner id="RUNNER_11" name="" type="Maven2">
