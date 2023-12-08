@@ -15,6 +15,7 @@
           <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
           <param name="jetbrains.buildServer.sshexec.command" value="cat 1.txt" />
           <param name="teamcity.step.mode" value="default" />
+          <param name="teamcitySshKey" value="ollvenMainNode.pem" />
         </parameters>
       </runner>
       <runner id="RUNNER_11" name="" type="Maven2">
