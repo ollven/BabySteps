@@ -11,12 +11,11 @@
       <runner id="ssh_exec_runner" name="" type="ssh-exec-runner">
         <parameters>
           <param name="jetbrains.buildServer.deployer.targetUrl" value="10.128.93.172" />
-          <param name="jetbrains.buildServer.deployer.username" value="Olga.Sventukh" />
-          <param name="jetbrains.buildServer.sshexec.authMethod" value="DEFAULT_KEY" />
+          <param name="jetbrains.buildServer.deployer.username" value="ubuntu" />
+          <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
           <param name="jetbrains.buildServer.sshexec.command" value="cat 1.txt" />
-          <param name="secure:jetbrains.buildServer.deployer.password" value="credentialsJSON:f9adaf87-732b-4006-bffd-9608a5a264a6" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="teamcitySshKey" value="id_rsa" />
+          <param name="teamcitySshKey" value="ollvenMainNode.pem" />
         </parameters>
       </runner>
       <runner id="RUNNER_11" name="" type="Maven2">
