@@ -32,8 +32,6 @@ version = "2023.05"
 
 project {
 
- System.getenv("TEAMCITY_DB_PASSWORD")
-
     buildType(Build)
 
     features {
