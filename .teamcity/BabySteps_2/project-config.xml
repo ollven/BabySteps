@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4f454654-1c35-479a-8783-73e6e04d172b" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>BabySteps</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_22" type="OAuthProvider">
+      <parameters>
+        <param name="clientId" value="6045005489155.6045015317203" />
+        <param name="displayName" value="Slack" />
+        <param name="providerType" value="slackConnection" />
+        <param name="secure:clientSecret" value="credentialsJSON:34618669-c7e5-4214-84c0-5b5dc2e001cf" />
+        <param name="secure:token" value="credentialsJSON:a7587364-a07b-443f-811e-e694c19e869a" />
+        <param name="serviceMessageMaxNotificationsPerBuild" value="-1" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_27" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="PREFER_VCS" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="ignoreChangesInDependenciesAndVcsSettings" value="false" />
+        <param name="rootId" value="BabySteps_2_HttpsGithubComOllvenBabyStepsRefsHeadsMain" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
