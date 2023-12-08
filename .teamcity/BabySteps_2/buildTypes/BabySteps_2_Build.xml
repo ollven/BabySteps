@@ -10,11 +10,12 @@
     <build-runners>
       <runner id="ssh_exec_runner" name="" type="ssh-exec-runner">
         <parameters>
-          <param name="jetbrains.buildServer.deployer.targetUrl" value="10.128.93.172" />
-          <param name="jetbrains.buildServer.deployer.username" value="ubuntu" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="10.128.93.139" />
+          <param name="jetbrains.buildServer.deployer.username" value="Administrator" />
           <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
           <param name="jetbrains.buildServer.sshexec.command"><![CDATA[pwd 
 ./1.sh]]></param>
+          <param name="secure:jetbrains.buildServer.deployer.password" value="credentialsJSON:57da657d-67c5-4f44-a37d-71887366ca3b" />
           <param name="teamcity.step.mode" value="default" />
           <param name="teamcitySshKey" value="ollvenMainNode.pem" />
         </parameters>
