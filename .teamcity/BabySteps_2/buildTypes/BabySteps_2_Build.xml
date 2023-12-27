@@ -6,6 +6,9 @@
     <options>
       <option name="artifactRules" value="**/*.jar" />
     </options>
+    <disabled-settings>
+      <setting-ref ref="ssh_exec_runner" />
+    </disabled-settings>
     <parameters />
     <build-runners>
       <runner id="ssh_exec_runner" name="" type="ssh-exec-runner">
