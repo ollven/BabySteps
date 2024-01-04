@@ -111,7 +111,7 @@ object Build : BuildType({
     cleanup {
         keepRule {
             id = "KEEP_RULE_8"
-            keepAtLeast = builds(14)
+            keepAtLeast = days(14)
             dataToKeep = historyAndStatistics {
                 preserveArtifacts = all()
             }
