@@ -107,4 +107,14 @@ object Build : BuildType({
             buildProbablyHanging = true
         }
     }
+
+    cleanup {
+        keepRule {
+            id = "KEEP_RULE_8"
+            keepAtLeast = builds(14)
+            dataToKeep = historyAndStatistics {
+                preserveArtifacts = all()
+            }
+        }
+    }
 })
