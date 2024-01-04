@@ -44,6 +44,12 @@ project {
             serviceMessageMaxNotificationsPerBuild = "-1"
         }
     }
+
+    cleanup {
+        baseRule {
+            option("disableCleanupPolicies", true)
+        }
+    }
 }
 
 object Build : BuildType({
