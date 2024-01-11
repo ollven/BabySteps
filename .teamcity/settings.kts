@@ -91,6 +91,7 @@ object Build : BuildType({
         perfmon {
         }
         notifications {
+            enabled = false
             notifierSettings = slackNotifier {
                 connection = "PROJECT_EXT_22"
                 sendTo = "#testing"
