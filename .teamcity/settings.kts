@@ -104,6 +104,7 @@ object Build : BuildType({
             buildProbablyHanging = true
         }
         notifications {
+            enabled = false
             notifierSettings = emailNotifier {
                 email = "olga.sventukh@jetbrains.com"
             }
