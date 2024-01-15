@@ -93,6 +93,8 @@ object Build : BuildType({
             name = "sonar"
             id = "sonar"
             type = "sonar-plugin"
+            param("target.jdk.home", "%env.JDK_17_0%")
+            param("additionalParameters", "-X")
             param("sonarServer", "d84ee010-c3e1-488f-9f29-60a9af1b11ad")
         }
     }
