@@ -89,6 +89,12 @@ object Build : BuildType({
             goals = "clean package"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
+        step {
+            name = "sonar"
+            id = "sonar"
+            type = "sonar-plugin"
+            param("sonarServer", "d84ee010-c3e1-488f-9f29-60a9af1b11ad")
+        }
     }
 
     triggers {
