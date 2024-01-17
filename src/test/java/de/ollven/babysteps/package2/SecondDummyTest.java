@@ -8,7 +8,7 @@ public class SecondDummyTest {
 
     @Test
     public void secondtestThatAlwaysFails() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Assertions.assertTrue(true);
     }
 
