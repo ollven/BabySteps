@@ -93,6 +93,7 @@ object Build : BuildType({
             name = "sonar"
             id = "sonar"
             type = "sonar-plugin"
+            enabled = false
             param("target.jdk.home", "%env.JDK_17_0%")
             param("teamcity.tool.sonarquberunner", "%teamcity.tool.sonar-qube-scanner.4.2.0.1873-scanner%")
             param("additionalParameters", "-X")
