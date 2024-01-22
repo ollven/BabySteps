@@ -136,8 +136,6 @@ object Build : BuildType({
     }
 
     dependencies {
-        snapshot(AbsoluteId("OllvenJavaMaven_Build")) {
-        }
         snapshot(AbsoluteId("Onetestclass_Build")) {
         }
     }
