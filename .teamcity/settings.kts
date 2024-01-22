@@ -135,11 +135,6 @@ object Build : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(AbsoluteId("Onetestclass_Build")) {
-        }
-    }
-
     cleanup {
         keepRule {
             id = "KEEP_RULE_8"
