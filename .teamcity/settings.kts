@@ -138,6 +138,10 @@ object Build : BuildType({
         }
     }
 
+    requirements {
+        equals("teamcity.agent.hostname", "ip-10-128-93-162")
+    }
+
     cleanup {
         keepRule {
             id = "KEEP_RULE_8"
