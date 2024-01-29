@@ -88,9 +88,10 @@ object Build : BuildType({
         maven {
             goals = "clean package"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
-            coverageEngine = idea {
-                includeClasses = "de.ollven.*"
+            coverageEngine = jacoco {
+                classLocations = "+:build/main/**/*.class"
             }
+            param("teamcity.coverage.idea.includePatterns", "de.ollven.*")
         }
         step {
             name = "sonar"
