@@ -89,7 +89,7 @@ object Build : BuildType({
             goals = "clean package"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             coverageEngine = jacoco {
-                classLocations = "+:build/main/**/*.class"
+                classLocations = "+:build/main/**/*"
             }
             param("teamcity.coverage.idea.includePatterns", "de.ollven.*")
         }
