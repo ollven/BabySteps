@@ -89,7 +89,6 @@ object Build : BuildType({
         maven {
             goals = "clean package"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
-            jdkHome = "%env.JDK_11%"
             param("teamcity.coverage.idea.includePatterns", "de.ollven.*")
             param("teamcity.coverage.jacoco.classpath", "+:build/main/**/*")
         }
