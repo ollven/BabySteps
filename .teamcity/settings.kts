@@ -144,16 +144,11 @@ object Build : BuildType({
             param("newParameter", listOf(
                 value("Sn"),
                 value("SomeKindOfLongName"),
-                value("Value1"),
+                value("hedlwehkfhkhferkjfhrehfrekhfkreherkfhklerfhkewrhfgjlkehkerhkerhkferhkferhkfhrekfhrekfhreklhfkerfhkerhfkerhfkjerhfkewrhfkewrhkfh"),
                 value("Value2"),
                 value("Value3"),
                 value("Value4"),
-                value("Value5"),
-                value("Value6"),
-                value("Value7"),
-                value("Value9"),
-                value("Value10"),
-                value("hedlwehkfhkhferkjfhrehfrekhfkreherkfhklerfhkewrhfgjlkehkerhkerhkferhkferhkfhrekfhrekfhreklhfkerfhkerhfkerhfkjerhfkewrhfkewrhkfh")
+                value("Value5")
             ))
         }
     }
