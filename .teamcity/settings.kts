@@ -141,6 +141,17 @@ object Build : BuildType({
                 value("Mac OS"),
                 value("Linux")
             )
+            param("newParameter", listOf(
+                value("Sn"),
+                value("SomeKindOfLongName"),
+                value("Value1"),
+                value("Value2"),
+                value("Value3"),
+                value("Value4"),
+                value("Value5"),
+                value("Value6"),
+                value("Value7")
+            ))
         }
     }
 
