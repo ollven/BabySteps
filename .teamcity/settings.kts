@@ -3,6 +3,7 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.notifications
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.sshExec
+import jetbrains.buildServer.configs.kotlin.matrix
 import jetbrains.buildServer.configs.kotlin.projectFeatures.slackConnection
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
@@ -135,6 +136,12 @@ object Build : BuildType({
             buildFailedToStart = true
             buildFailed = true
             buildProbablyHanging = true
+        }
+        matrix {
+            os = listOf(
+                value("Mac OS"),
+                value("Linux")
+            )
         }
     }
 
