@@ -153,12 +153,6 @@ object Build : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(AbsoluteId("Tw82851NoEnumConstant1711Java_Build")) {
-            onDependencyCancel = FailureAction.ADD_PROBLEM
-        }
-    }
-
     cleanup {
         keepRule {
             id = "KEEP_RULE_8"
