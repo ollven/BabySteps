@@ -63,7 +63,7 @@ project {
 }
 
 object Build : BuildType({
-    name = "Build"
+    name = "Newname"
 
     artifactRules = "**/*.jar"
 
