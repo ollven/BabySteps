@@ -153,11 +153,6 @@ object Build : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(AbsoluteId("Tw82851NoEnumConstant1711Java_Build")) {
-        }
-    }
-
     cleanup {
         keepRule {
             disabled = true
