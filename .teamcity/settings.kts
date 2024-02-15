@@ -160,6 +160,7 @@ object Build : BuildType({
 
     cleanup {
         keepRule {
+            disabled = true
             id = "KEEP_RULE_8"
             keepAtLeast = days(14)
             dataToKeep = historyAndStatistics {
