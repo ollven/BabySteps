@@ -168,6 +168,7 @@ object Build : BuildType({
             }
         }
         keepRule {
+            disabled = true
             id = "KEEP_RULE_9"
             keepAtLeast = builds(1)
             dataToKeep = historyAndStatistics {
