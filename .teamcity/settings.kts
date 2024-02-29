@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildFeatures.notifications
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
@@ -52,6 +53,16 @@ project {
             param("id", "d84ee010-c3e1-488f-9f29-60a9af1b11ad")
             param("url", "http://localhost:9000")
             param("token", "scrambled:c3FhXzc1ZDE2YmI4YTEyMjk2ODk5ZTkwMjJiYTAzMmQ1MjBiMWMwOGUwOWI=")
+        }
+        amazonEC2CloudProfile {
+            id = "amazon-3"
+            name = "Tests Profile"
+            terminateIdleMinutes = 30
+            region = AmazonEC2CloudProfile.Regions.EU_WEST_DUBLIN
+            authType = accessKey {
+                keyId = "credentialsJSON:253da1b9-5eba-438c-9825-64f7503af886"
+                secretKey = "credentialsJSON:5eb86222-6fe6-4757-99f0-d5b683d9dc2f"
+            }
         }
     }
 
