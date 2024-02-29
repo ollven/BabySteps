@@ -103,6 +103,7 @@ object Build : BuildType({
             jdkHome = "%env.JDK_11%"
             coverageEngine = jacoco {
                 classLocations = "+:build/main/**/*"
+                jacocoVersion = "%teamcity.tool.jacoco.0.8.2%"
             }
             param("teamcity.coverage.idea.includePatterns", "de.ollven.*")
         }
