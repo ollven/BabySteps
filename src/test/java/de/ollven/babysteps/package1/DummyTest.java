@@ -7,12 +7,12 @@ public class DummyTest {
 
     @Test
     public void testThatAlwaysFails() throws InterruptedException {
-        Thread.sleep(20000);
+        Thread.sleep(200000);
         Assertions.assertTrue(true);    }
 
     @Test
     public void testThatAlwaysPasses() throws InterruptedException {
-        Thread.sleep(20000);
+        Thread.sleep(200000);
         Assertions.assertTrue(true);
     }
 
