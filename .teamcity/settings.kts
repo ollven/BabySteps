@@ -122,8 +122,7 @@ object Build : BuildType({
     triggers {
         vcs {
             branchFilter = """
-                +:*
-                +pr
+                +:**
             """.trimIndent()
         }
     }
