@@ -4,6 +4,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.sshExec
+import jetbrains.buildServer.configs.kotlin.triggers.retryBuild
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -53,6 +54,14 @@ changeBuildType(RelativeId("Build")) {
             clearConditions()
             jdkHome = ""
             param("teamcity.coverage.runner", "")
+        }
+    }
+
+    triggers {
+        add {
+            retryBuild {
+                delaySeconds = 10
+            }
         }
     }
 }
