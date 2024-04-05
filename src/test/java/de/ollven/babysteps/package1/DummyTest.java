@@ -12,7 +12,7 @@ public class DummyTest {
 
     @Test
     public void testThatAlwaysPasses() throws InterruptedException {
-        Thread.sleep(200000);
+        Thread.sleep(20
         Assertions.assertTrue(true);
     }
 
