@@ -49,5 +49,5 @@ public class Main {
         int b = Integer.parseInt(s[1]);
         int c = Integer.parseInt(s[2]);*/
 //попробовать превратить в List
-//new comment
+//new cfarggfaer
 
