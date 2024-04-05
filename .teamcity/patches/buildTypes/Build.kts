@@ -4,9 +4,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.sshExec
-import jetbrains.buildServer.configs.kotlin.triggers.VcsTrigger
 import jetbrains.buildServer.configs.kotlin.triggers.retryBuild
-import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -60,15 +58,6 @@ changeBuildType(RelativeId("Build")) {
     }
 
     triggers {
-        val trigger1 = find<VcsTrigger> {
-            vcs {
-                branchFilter = "+:*"
-            }
-        }
-        trigger1.apply {
-            enabled = false
-
-        }
         add {
             retryBuild {
                 delaySeconds = 10
