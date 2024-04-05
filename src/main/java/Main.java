@@ -51,5 +51,5 @@ public class Main {
 //попробовать превратить в List
 //new cfarggfaer
 //djfksjghk
-//fajbejkh
+//fajbejkh frkaejfgkerjlfj
 
