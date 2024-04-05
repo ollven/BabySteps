@@ -50,4 +50,5 @@ public class Main {
         int c = Integer.parseInt(s[2]);*/
 //попробовать превратить в List
 //new cfarggfaer
+//djfksjghk
 
