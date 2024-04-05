@@ -12,13 +12,13 @@ public class DummyTest {
 
     @Test
     public void testThatAlwaysPasses() throws InterruptedException {
-        Thread.sleep(200000);
+        Thread.sleep(2000);
         Assertions.assertTrue(true);
     }
 
     @Test
     public void testThatIsSlowButAlwaysFails() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(200000);
         Assertions.assertTrue(true);
     }
 
