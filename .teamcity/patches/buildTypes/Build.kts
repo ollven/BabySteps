@@ -22,4 +22,12 @@ changeBuildType(RelativeId("Build")) {
 
         }
     }
+
+    failureConditions {
+
+        check(executionTimeoutMin == 0) {
+            "Unexpected option value: executionTimeoutMin = $executionTimeoutMin"
+        }
+        executionTimeoutMin = 2
+    }
 }
