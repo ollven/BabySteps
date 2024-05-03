@@ -2,6 +2,8 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.commitStatusPublisher
+import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.VcsTrigger
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.ui.*
@@ -12,6 +14,28 @@ To apply the patch, change the buildType with id = 'Build'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Build")) {
+    expectSteps {
+        maven {
+            id = "Maven2"
+            goals = "clean test"
+            runnerArgs = "-Dmaven.test.failure.ignore=true"
+        }
+    }
+    steps {
+        insert(1) {
+            script {
+                id = "simpleRunner"
+                scriptContent = """
+                    echo "##teamcity[testRetrySupport enabled='true']"
+                    echo "##teamcity[testStarted name='MyTest.test1']"
+                    echo "##teamcity[testFailed name='MyTest.test1' message='failure message' details='message and stack trace']"
+                    echo "##teamcity[testStarted name='MyTest.test1']"
+                    echo "##teamcity[testFinished name='MyTest.test1']"
+                """.trimIndent()
+            }
+        }
+    }
+
     triggers {
         val trigger1 = find<VcsTrigger> {
             vcs {
