@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.commitStatusPublisher
 import jetbrains.buildServer.configs.kotlin.triggers.VcsTrigger
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.ui.*
@@ -29,5 +30,16 @@ changeBuildType(RelativeId("Build")) {
             "Unexpected option value: executionTimeoutMin = $executionTimeoutMin"
         }
         executionTimeoutMin = 2
+    }
+
+    features {
+        add {
+            commitStatusPublisher {
+                publisher = github {
+                    githubUrl = "https://api.github.com"
+                    authType = vcsRoot()
+                }
+            }
+        }
     }
 }
