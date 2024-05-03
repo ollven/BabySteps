@@ -2,6 +2,7 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.commitStatusPublisher
+import jetbrains.buildServer.configs.kotlin.buildSteps.MavenBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.VcsTrigger
@@ -22,6 +23,10 @@ changeBuildType(RelativeId("Build")) {
         }
     }
     steps {
+        update<MavenBuildStep>(0) {
+            enabled = false
+            clearConditions()
+        }
         insert(1) {
             script {
                 id = "simpleRunner"
