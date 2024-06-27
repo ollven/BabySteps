@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="target =&gt; target" />
+      <option name="supportTestRetry" value="true" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_8" />
+      <setting-ref ref="TRIGGER_1" />
+      <setting-ref ref="TRIGGER_5" />
+      <setting-ref ref="simpleRunner" />
+      <setting-ref ref="simpleRunner_1" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="Maven2" name="" type="Maven2">
+        <parameters>
+          <param name="goals" value="clean package" />
+          <param name="localRepoScope" value="agent" />
+          <param name="maven.path" value="%teamcity.tool.maven.DEFAULT%" />
+          <param name="pomLocation" value="pom.xml" />
+          <param name="runnerArgs" value="-Dmaven.test.failure.ignore=true" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="teamcity.tool.jacoco" value="%teamcity.tool.jacoco.DEFAULT%" />
+          <param name="userSettingsSelection" value="userSettingsSelection:default" />
+        </parameters>
+      </runner>
+      <runner id="simpleRunner" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testStarted name='MyTest.test1']"
+echo "##teamcity[testFailed name='MyTest.test1' message='failure message' details='message and stack trace']"
+echo "##teamcity[testFinished name='MyTest.test1']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="simpleRunner_1" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testSuiteStarted name='test_suite']"
+echo "##teamcity[testRetrySupport enabled='true']"
+echo "##teamcity[testStarted name='MyTest.test1']"
+echo "##teamcity[testFailed name='MyTest.test1']"
+echo "##teamcity[testFinished name='MyTest.test1' duration='0']"
+sleep 60
+echo "##teamcity[testStarted name='MyTest.test1' captureStandardOutput='true']"
+echo "##teamcity[testFinished name='MyTest.test1' duration='0']"
+sleep 60
+echo "##teamcity[testSuiteFinished name='test_suite']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="BabySteps_2_HttpsGithubComOllvenBabyStepsRefsHeadsMain" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+pr:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+      <build-trigger id="TRIGGER_5" type="buildDependencyTrigger">
+        <parameters>
+          <param name="branchFilter" value="+pr:*" />
+          <param name="dependsOn" value="BranchFilters_Build" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="perfmon">
+        <parameters>
+          <param name="teamcity.perfmon.feature.enabled" value="true" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_2" type="commit-status-publisher">
+        <parameters>
+          <param name="github_authentication_type" value="vcsRoot" />
+          <param name="github_host" value="https://api.github.com" />
+          <param name="publisherId" value="githubStatusPublisher" />
+        </parameters>
+      </extension>
+      <extension id="matrix" type="matrix">
+        <parameters>
+          <param name="matrix.param.arch.2" value="arch" />
+          <param name="matrix.param.os.1" value="os" />
+          <param name="matrix.value.arch.1" value="aarch64" />
+          <param name="matrix.value.os.1" value="Linux" />
+          <param name="matrix.value.os.2" value="Mac OS" />
+          <param name="matrix.value.os.3" value="Windows" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_8" type="notifications">
+        <parameters>
+          <param name="branchFilter" value="+pr:*" />
+          <param name="buildFinishedFailure" value="true" />
+          <param name="buildFinishedSuccess" value="true" />
+          <param name="email" value="olga.sventukh@jetbrains.com" />
+          <param name="notifier" value="email" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_15" type="AutoMergeFeature">
+        <parameters>
+          <param name="teamcity.automerge.buildStatusCondition" value="successful" />
+          <param name="teamcity.automerge.dstBranch" value="&lt;default&gt;" />
+          <param name="teamcity.automerge.message" value="Merge branch '%teamcity.build.branch%'" />
+          <param name="teamcity.automerge.run.policy" value="runAfterBuildFinish" />
+          <param name="teamcity.automerge.srcBranchFilter" value="+pr:*" />
+          <param name="teamcity.merge.policy" value="alwaysCreateMergeCommit" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+
