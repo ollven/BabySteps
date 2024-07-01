@@ -83,6 +83,7 @@ object Build : BuildType({
             }
         }
         matrix {
+            enabled = false
             os = listOf(
                 value("Linux"),
                 value("Mac OS"),
