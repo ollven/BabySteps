@@ -103,6 +103,7 @@ object Build : BuildType({
             buildFinishedSuccessfully = true
         }
         merge {
+            enabled = false
             branchFilter = "+pr:*"
         }
     }
