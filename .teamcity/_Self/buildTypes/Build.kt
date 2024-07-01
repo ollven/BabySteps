@@ -51,6 +51,10 @@ object Build : BuildType({
                 echo "##teamcity[testSuiteFinished name='test_suite']"
             """.trimIndent()
         }
+        script {
+            id = "simpleRunner_2"
+            scriptContent = "blablabla"
+        }
     }
 
     triggers {
