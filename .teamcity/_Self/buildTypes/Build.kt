@@ -77,6 +77,7 @@ object Build : BuildType({
         perfmon {
         }
         commitStatusPublisher {
+            enabled = false
             publisher = github {
                 githubUrl = "https://api.github.com"
                 authType = vcsRoot()
