@@ -53,6 +53,7 @@ object Build : BuildType({
         }
         script {
             id = "simpleRunner_2"
+            enabled = false
             scriptContent = "blablabla"
         }
     }
