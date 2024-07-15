@@ -124,7 +124,7 @@ object Build : BuildType({
         notifications {
             notifierSettings = slackNotifier {
                 connection = "PROJECT_EXT_17"
-                sendTo = "U060WGMMMSB"
+                sendTo = "#testing-2"
                 messageFormat = simpleMessageFormat()
             }
             buildStarted = true
