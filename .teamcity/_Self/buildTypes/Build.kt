@@ -120,5 +120,16 @@ object Build : BuildType({
             buildFinishedSuccessfully = true
             firstBuildErrorOccurs = true
         }
+        notifications {
+            notifierSettings = slackNotifier {
+                connection = "PROJECT_EXT_17"
+                sendTo = "U060WGMMMSB"
+                messageFormat = simpleMessageFormat()
+            }
+            buildStarted = true
+            buildFailedToStart = true
+            buildFailed = true
+            buildFinishedSuccessfully = true
+        }
     }
 })
