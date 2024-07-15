@@ -109,6 +109,7 @@ object Build : BuildType({
             branchFilter = "+pr:*"
         }
         notifications {
+            enabled = false
             notifierSettings = slackNotifier {
                 connection = "PROJECT_EXT_17"
                 sendTo = "#testing"
