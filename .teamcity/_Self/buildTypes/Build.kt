@@ -108,5 +108,17 @@ object Build : BuildType({
             enabled = false
             branchFilter = "+pr:*"
         }
+        notifications {
+            notifierSettings = slackNotifier {
+                connection = "PROJECT_EXT_17"
+                sendTo = "#testing"
+                messageFormat = simpleMessageFormat()
+            }
+            buildStarted = true
+            buildFailedToStart = true
+            buildFailed = true
+            buildFinishedSuccessfully = true
+            firstBuildErrorOccurs = true
+        }
     }
 })
