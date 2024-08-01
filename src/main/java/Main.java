@@ -39,4 +39,4 @@ public class Main {
 
 }
 ///blwsdqwdefeferуацуацdsffxaxwqwqecwecwecwce
-///dcqwececervervdfsadfasdvferggerggegrewrgdcwefwefeqwfwqd    dwedwefewq dvdfvdsvds regergregre rferegerwg. dsfsfvfdsdvf
+///dcqwececervervdfsadfasdvferggerggegrew
