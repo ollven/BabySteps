@@ -13,7 +13,7 @@ public class DummyTest {
     @Test
     public void testThatAlwaysPasses() throws InterruptedException {
         Thread.sleep(500);
-        Assertions.assertTrue(true);
+        Assertions.assertTrue(false);
     }
 
     @Test
