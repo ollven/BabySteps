@@ -56,6 +56,13 @@ object Build : BuildType({
             enabled = false
             scriptContent = "blablabla"
         }
+        script {
+            id = "simpleRunner_3"
+            scriptContent = """
+                msg2=":rotating_light: *run.reports.recap-81 (i-0334d67911e5ce76d)* running since 2024-08-08 16:31:07!"
+                echo "##teamcity[notification notifier='slack' message='${'$'}msg2' sendTo='${'$'}sendTo' connectionId='%slack_connection_id%']"
+            """.trimIndent()
+        }
     }
 
     triggers {
