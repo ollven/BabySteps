@@ -16,6 +16,10 @@ object Build : BuildType({
 
     artifactRules = "target => target"
 
+    params {
+        param("slack_connection_id", "PROJECT_EXT_17")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
