@@ -14,8 +14,7 @@ public class Main {
             int c = toint.nextInt();
             int sum = result(a, b, c);
             System.out.print(sum + " ");
-            System.out.print(sum + "CSPcheck333");
-
+           
         }
     }
 
