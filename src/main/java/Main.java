@@ -38,8 +38,3 @@ public class Main {
     }
 
 }
-///blwsdqwdefeferуацуацdsffxaxwqwqecwecwecwce
-///dcqwececervervdfsadfasdvferggerggeg khfkhgjkhgjhgjokgmgjh
-////rferfergergergerg fvdfvfdvdfvdfdfv
-////frrfreerfer аавыаамвмвыамвыа dsfergrgewggrgew4
-////erfwewergergewwge eqrreqwre
