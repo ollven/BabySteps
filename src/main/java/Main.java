@@ -14,13 +14,7 @@ public class Main {
             int c = toint.nextInt();
             int sum = result(a, b, c);
             System.out.print(sum + " ");
-            System.out.print(sum + "CSPcheck333");
-            System.out.print(sum + "TW-70782");
-            System.out.print(sum + "TTW-83609");
-          	System.out.print(sum + "CodeReview34566juhlhljhhj");
-            System.out.print(sum + "updateCode");
-
-
+            System.out.print(sum + "CSPcheck333")
 
         }
     }
