@@ -22,4 +22,22 @@ object Project : Project({
             allowInBuilds = false
         }
     }
+
+    cleanup {
+        keepRule {
+            id = "KEEP_RULE_3"
+            keepAtLeast = allBuilds()
+            applyToBuilds {
+                inBranches {
+                    branchState = active()
+                }
+                inPersonalBuilds = onlyPersonal()
+            }
+            dataToKeep = historyAndStatistics {
+                preserveArtifacts = all()
+            }
+            applyPerEachBranch = true
+            preserveArtifactsDependencies = true
+        }
+    }
 })
