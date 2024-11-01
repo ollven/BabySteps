@@ -12,5 +12,9 @@ in the root project, and delete the patch script.
 create(DslContext.projectId, Project({
     id("CleanUP")
     name = "CleanUP"
+
+    params {
+        param("teamcity.ui.settings.readOnly", "true")
+    }
 }))
 
