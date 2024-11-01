@@ -9,6 +9,10 @@ object Project : Project({
 
     buildType(Build)
 
+    params {
+        param("teamcity.ui.settings.readOnly", "true")
+    }
+
     features {
         awsConnection {
             id = "AmazonWebServicesAws_4"
