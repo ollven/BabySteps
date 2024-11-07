@@ -1,0 +1,37 @@
+<meta-runner name="Build">
+  <description>1</description>
+  <settings>
+    <parameters>
+      <param name="slack_connection_id" value="PROJECT_EXT_17" />
+      <param name="teamcity.compositeBuild.reportTab.enabled" value="false" />
+      <param name="teamcity.internal.agent.distribution.jdk.bundle.enabled" value="true" />
+    </parameters>
+    <build-runners>
+      <runner name="" type="Maven2">
+        <parameters>
+          <param name="goals" value="clean package" />
+          <param name="localRepoScope" value="agent" />
+          <param name="maven.path" value="%teamcity.tool.maven.DEFAULT%" />
+          <param name="pomLocation" value="pom.xml" />
+          <param name="runnerArgs" value="-Dmaven.test.failure.ignore=true" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="teamcity.tool.jacoco" value="%teamcity.tool.jacoco.DEFAULT%" />
+          <param name="userSettingsSelection" value="userSettingsSelection:default" />
+        </parameters>
+      </runner>
+      <runner name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[msg2=":rotating_light: *run.reports.recap-81 (i-0334d67911e5ce76d)* running since 2024-08-08 16:31:07!"
+echo "##teamcity[notification notifier='slack' message='$msg2' sendTo='$sendTo' connectionId='%slack_connection_id%']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
