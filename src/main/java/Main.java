@@ -25,8 +25,6 @@ public class Main {
             sum = sum + (result % 10);
             result = result / 10;
         }
-
-        ////////////////////////////
         return sum;
     }
 }
