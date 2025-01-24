@@ -28,4 +28,4 @@ public class Main {
         return sum;
     }
 }
-/////test link from pullrequest
+/////test link from pullrequest without githib cheks
